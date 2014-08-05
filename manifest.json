@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pivotal tracker Subtotals",
+  "description": "Groups time shifts in the pivotal and shows subtotals",
+  "version": "1.0.0",
+
+   "icons":{
+      "128":"icon_128.png"
+   },
+
+  "manifest_version": 2,
+
+   "content_scripts":[
+      {
+         "matches":["https://www.pivotaltracker.com/time_shifts*"],
+         "js":["jquery.min.js", "calculate-subtotals.js"]
+      }
+   ]
+
+}
