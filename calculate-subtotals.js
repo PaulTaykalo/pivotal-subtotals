@@ -26,14 +26,9 @@ function update_subtotals() {
     var tr = jQuery("#shift_table tr td.date").filter(function(i, element){return jQuery(element).text().trim() == p }).last().parent();
     var subtotalRowText = 
         ' <tr>' +
-        '  <td class="total">'+ p  + '</td> ' +
-        ' <td class="empty"></td> ' +
-        ' <td class="empty"></td> ' +
-        '  <td class="empty"></td> ' +
-        '  <td class="empty"></td> ' +
-        '  <td class="empty"></td> ' +
-        '  <td id="total_hours" class="hours total">'+hours_by_date[p]+'</td> ' +
-        '  <td class="empty"></td> ' +
+        '<td class="hours total" colspan="6" style="text-align:left;">'+p+'</td>' +
+        '<td id="total_hours" class="hours total">'+hours_by_date[p]+'</td>' +  
+        '<td class="hours total" colspan="3"></td> ' +
         '</tr> '
     // console.log(";"+p+";" +" last date element" + last_date_element);
     jQuery(subtotalRowText).insertAfter(tr);
